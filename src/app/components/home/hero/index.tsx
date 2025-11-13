@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -73,9 +74,19 @@ function HeroSection() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className='text-white text-xl md:text-2xl font-bold tracking-wider'
           >
-            RM
+            <Link href="/">
+              <Image
+                src="/logos/Logo_dark.png"
+                alt="Ronminco Logo"
+                width={120}
+                height={48}
+                style={{ width: 'auto', height: '48px', maxHeight: '48px' }}
+                quality={100}
+                priority={true}
+                className='h-10 md:h-12 w-auto'
+              />
+            </Link>
           </motion.div>
           <motion.button
             initial={{ opacity: 0, x: 20 }}

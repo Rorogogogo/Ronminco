@@ -4,24 +4,25 @@ import Link from 'next/link';
 interface HeaderProps { }
 const Logo: React.FC<HeaderProps> = () => {
     return (
-        <Link href="/">
+        <Link href="/" className='flex items-center'>
             <Image
-                src="/images/logo/logo.svg"
-                alt="logo"
-                width={117}
-                height={34}
-                style={{ width: 'auto', height: 'auto' }}
+                src="/logos/Logo_light.png"
+                alt="Ronminco Logo"
+                width={80}
+                height={32}
+                style={{ width: 'auto', height: '32px', maxHeight: '32px' }}
                 quality={100}
                 priority={true}
                 className='dark:hidden'
             />
             <Image
-                src="/images/logo/DarkModeLogo.svg"
-                alt="logo"
-                width={160}
-                height={50}
-                style={{ width: 'auto', height: 'auto' }}
+                src="/logos/Logo_dark.png"
+                alt="Ronminco Logo"
+                width={80}
+                height={32}
+                style={{ width: 'auto', height: '32px', maxHeight: '32px' }}
                 quality={100}
+                priority={true}
                 className='dark:block hidden'
             />
         </Link>
