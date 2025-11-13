@@ -5,14 +5,29 @@ import Link from 'next/link'
 
 function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [videoLoaded, setVideoLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
-    // Ensure video plays on mount
-    if (videoRef.current) {
-      videoRef.current.play().catch(error => {
+    const video = videoRef.current
+    if (!video) return
+
+    const handleCanPlay = () => {
+      setVideoLoaded(true)
+      video.play().catch(error => {
         console.log('Video autoplay failed:', error)
       })
+    }
+
+    // Check if video is already loaded
+    if (video.readyState >= 3) {
+      handleCanPlay()
+    } else {
+      video.addEventListener('canplay', handleCanPlay)
+    }
+
+    return () => {
+      video.removeEventListener('canplay', handleCanPlay)
     }
   }, [])
 
@@ -41,7 +56,9 @@ function HeroSection() {
           loop
           playsInline
           preload='auto'
-          className='absolute inset-0 w-full h-full object-cover'
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+            videoLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
         >
           <source src='/videos/Hero.mp4' type='video/mp4' />
         </video>
