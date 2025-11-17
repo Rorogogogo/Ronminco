@@ -5,7 +5,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 function HeroSection() {
-  const [menuOpen, setMenuOpen] = useState(false)
   const [videoLoaded, setVideoLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
@@ -68,8 +67,8 @@ function HeroSection() {
 
       {/* Content Overlay */}
       <div className='relative z-20 h-full w-full'>
-        {/* Top Bar */}
-        <div className='absolute top-0 left-0 right-0 flex justify-between items-center p-6 md:p-10'>
+        {/* Logo */}
+        <div className='absolute top-0 left-0 p-6 md:p-10'>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -88,15 +87,6 @@ function HeroSection() {
               />
             </Link>
           </motion.div>
-          <motion.button
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            onClick={() => setMenuOpen(!menuOpen)}
-            className='text-white text-sm md:text-base font-medium tracking-widest hover:opacity-70 transition-opacity'
-          >
-            MENU
-          </motion.button>
         </div>
 
         {/* Main Content */}
@@ -167,29 +157,6 @@ function HeroSection() {
           </div>
         </motion.div>
       </div>
-
-      {/* Mobile Menu Overlay */}
-      {menuOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className='fixed inset-0 bg-black/95 z-50 flex items-center justify-center'
-        >
-          <button
-            onClick={() => setMenuOpen(false)}
-            className='absolute top-6 right-6 text-white text-2xl'
-          >
-            ✕
-          </button>
-          <nav className='flex flex-col items-center gap-8 text-white text-2xl font-medium'>
-            <Link href='/' onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link href='/about' onClick={() => setMenuOpen(false)}>About</Link>
-            <Link href='/services' onClick={() => setMenuOpen(false)}>Services</Link>
-            <Link href='/contact' onClick={() => setMenuOpen(false)}>Contact</Link>
-          </nav>
-        </motion.div>
-      )}
     </section>
   )
 }

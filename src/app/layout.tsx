@@ -2,16 +2,23 @@
 import './globals.css'
 import { SessionProvider } from 'next-auth/react'
 import { ThemeProvider } from 'next-themes'
-import Header from './components/layout/header'
+import CurvedMenu from './components/ui/curved-menu'
 import Footer from './components/layout/footer/Footer'
 import ScrollToTop from './components/scroll-to-top'
 import LenisProvider from './components/shared/lenis-provider'
+import { headerData } from './components/layout/header/Navigation/Menudata'
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // Convert headerData to curved menu format
+  const curvedMenuItems = headerData.map((item) => ({
+    heading: item.label,
+    href: item.href,
+  }))
+
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
@@ -25,11 +32,10 @@ export default function RootLayout({
           <ThemeProvider
             attribute='class'
             enableSystem={false}
-            defaultTheme='light'>
+            defaultTheme='dark'>
             <LenisProvider />
-            {/* ---------------------Header Starts-----------------  */}
-            <Header />
-            {/* ---------------------Header Ends-------------------  */}
+            {/* Curved Menu - Global Navigation */}
+            <CurvedMenu navItems={curvedMenuItems} />
             {children}
             {/* ---------------------Footer Starts-----------------  */}
             <Footer />
