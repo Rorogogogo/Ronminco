@@ -1,12 +1,27 @@
-'use client'
 import './globals.css'
-import { SessionProvider } from 'next-auth/react'
-import { ThemeProvider } from 'next-themes'
+import type { Metadata } from 'next'
 import CurvedMenu from './components/ui/curved-menu'
 import Footer from './components/layout/footer/Footer'
-import ScrollToTop from './components/scroll-to-top'
-import LenisProvider from './components/shared/lenis-provider'
 import { headerData } from './components/layout/header/Navigation/Menudata'
+import { Providers } from './providers'
+
+export const metadata: Metadata = {
+  title: 'Ronminco | Software Solutions by Robert & Michelle',
+  description: 'A software studio founded by Robert and Michelle, crafting innovative solutions that transform businesses through cutting-edge technology.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon_io/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon_io/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/favicon_io/apple-touch-icon.png', sizes: '180x180' },
+    ],
+    other: [
+      { rel: 'manifest', url: '/favicon_io/site.webmanifest' },
+    ],
+  },
+}
 
 export default function RootLayout({
   children,
@@ -21,29 +36,15 @@ export default function RootLayout({
 
   return (
     <html lang='en' suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
-        <link rel="manifest" href="/favicon_io/site.webmanifest" />
-      </head>
       <body>
-        <SessionProvider>
-          <ThemeProvider
-            attribute='class'
-            enableSystem={false}
-            defaultTheme='dark'>
-            <LenisProvider />
-            {/* Curved Menu - Global Navigation */}
-            <CurvedMenu navItems={curvedMenuItems} />
-            {children}
-            {/* ---------------------Footer Starts-----------------  */}
-            <Footer />
-            {/* ---------------------Footer Ends-----------------  */}
-            <ScrollToTop />
-          </ThemeProvider>
-        </SessionProvider>
+        <Providers>
+          {/* Curved Menu - Global Navigation */}
+          <CurvedMenu navItems={curvedMenuItems} />
+          {children}
+          {/* ---------------------Footer Starts-----------------  */}
+          <Footer />
+          {/* ---------------------Footer Ends-----------------  */}
+        </Providers>
       </body>
     </html>
   )
