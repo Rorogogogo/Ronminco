@@ -14,7 +14,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         forcedTheme='dark'
       >
         <LenisProvider />
-        {children}
+         {children}
         <ScrollToTop />
       </ThemeProvider>
     </SessionProvider>
