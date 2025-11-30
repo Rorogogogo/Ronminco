@@ -93,28 +93,28 @@ const innovationList: innovation[] = [
 
 const onlinePresenceList: onlinePresence[] = [
   {
-    image: '/images/home/onlinePresence/online_img_1.jpg',
-    title: 'FlowBank',
-    tag: ['UX Research', 'Interface Design'],
-    link: 'https://www.wrappixel.com/',
+    image: '/images/home/onlinePresence/launchstory_img.png',
+    title: 'Launch Story',
+    tag: ['News Media Platform', 'B2B Platform'],
+    link: 'https://www.launchstory.com.au/',
   },
   {
-    image: '/images/home/onlinePresence/online_img_2.jpg',
-    title: 'Academy.co',
-    tag: ['Product Design', 'Interaction Design'],
-    link: 'https://www.wrappixel.com/',
+    image: '/images/home/onlinePresence/propeak_img.png',
+    title: 'ProPeak Finance',
+    tag: ['Finance', 'Brand Identity Design'],
+    link: 'https://propeak.com.au/',
   },
   {
-    image: '/images/home/onlinePresence/online_img_3.jpg',
-    title: 'Genome',
-    tag: ['Brand identity design', 'UX Research'],
-    link: 'https://www.wrappixel.com/',
+    image: '/images/home/onlinePresence/jobjourney_img.png',
+    title: 'Job Journey',
+    tag: ['Career Assistant', 'AI Powered', 'Personal Portfolio'],
+    link: 'https://jobjourney.me/',
   },
   {
-    image: '/images/home/onlinePresence/online_img_4.jpg',
-    title: 'Hotto',
-    tag: ['Visual Storytelling', 'Web & Mobile Design'],
-    link: 'https://www.wrappixel.com/',
+    image: '/images/home/onlinePresence/standtogether_img.png',
+    title: 'Stand Together',
+    tag: ['Community Building', 'Non-Profit'],
+    link: 'https://standtogether.club/en/',
   },
 ]
 
