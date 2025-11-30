@@ -12,17 +12,34 @@ import Subscription from "./components/home/subscription";
 import WebResult from "./components/home/web-result";
 
 export const metadata: Metadata = {
-    title: "Ronminco | Software Solutions by Robert & Michelle",
-    description: "A software studio founded by Robert and Michelle, crafting innovative solutions that transform businesses through cutting-edge technology.",
+  title: "Ronminco | Software Solutions by Robert & Michelle",
+  description: "A software studio founded by Robert and Michelle, crafting innovative solutions that transform businesses through cutting-edge technology.",
 };
 
 
 export default function Home() {
   return (
     <main>
+      {/* Fixed Background Video for the rest of the page */}
+      <div className="fixed inset-0 w-full h-full -z-50">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/main.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
       {/* ---------------------Hero section (Full Screen)-----------------  */}
       <HeroSection />
       {/* ---------------------Hero section Ends-----------------  */}
+
+      {/* Hero Transition Overlay */}
+      <div className="absolute top-[100vh] left-0 w-full h-[33vh] bg-gradient-to-b from-black via-black/50 to-transparent z-40 pointer-events-none" />
 
       {/* ---------------------Brand logo section Starts-----------------  */}
       <Brand />
