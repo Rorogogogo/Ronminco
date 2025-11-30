@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Sign Up | Play Awake Agency",
+    "Sign Up | Play “Ronminco",
 };
 
 const SignupPage = () => {

@@ -48,6 +48,7 @@ function HeroSection() {
   return (
     <section className='relative h-screen w-full overflow-hidden'>
       {/* Video Background */}
+      {/* Video Background */}
       <div className='absolute inset-0 w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
         <video
           ref={videoRef}
@@ -56,9 +57,8 @@ function HeroSection() {
           loop
           playsInline
           preload='auto'
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-            videoLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${videoLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <source src='/videos/Hero.mp4' type='video/mp4' />
         </video>
@@ -126,7 +126,7 @@ function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className='mt-4 md:mt-6 text-white/90 text-sm md:text-base lg:text-lg max-w-2xl px-4'
               >
-                A software studio founded by Robert and Michelle, crafting innovative solutions that transform businesses through cutting-edge technology and forward-thinking development.
+                A software studio crafting innovative solutions that transform businesses through cutting-edge technology and forward-thinking development.
               </motion.div>
             </motion.div>
 
