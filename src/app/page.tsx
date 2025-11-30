@@ -58,7 +58,7 @@ export default function Home() {
       {/* ---------------------Online presence section Ends-----------------  */}
 
       {/* ---------------------Creative mind section Starts-----------------  */}
-      <CreativeMind />
+      {/* <CreativeMind /> */}
       {/* ---------------------Creative mind section Ends-----------------  */}
 
       {/* ---------------------Customer Stories section Starts-----------------  */}

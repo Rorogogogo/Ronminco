@@ -126,7 +126,7 @@ function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className='mt-4 md:mt-6 text-white/90 text-sm md:text-base lg:text-lg max-w-2xl px-4'
               >
-                A software studio founded by Robert and Michelle, crafting innovative solutions that transform businesses through cutting-edge technology and forward-thinking development.
+                A software studio crafting innovative solutions that transform businesses through cutting-edge technology and forward-thinking development.
               </motion.div>
             </motion.div>
 

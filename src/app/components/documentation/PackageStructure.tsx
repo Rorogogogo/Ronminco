@@ -18,7 +18,7 @@ export const PackageStructure = () => {
       <div className='rounded-md p-6 pt-3 border border-border dark:border-dark_border mt-6'>
         <div className='flex items-center gap-4'>
           <h5 className='text-base font-medium mt-3 mb-1'>
-            Awake Tailwind Nextjs Templates
+            “Ronminco Tailwind Nextjs Templates
           </h5>
         </div>
         <ul className='ps-3 md:ps-5 list-unstyled'>

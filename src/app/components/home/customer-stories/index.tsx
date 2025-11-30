@@ -23,12 +23,12 @@ function CustomerStories() {
                   </span>
                   <div className='flex flex-col gap-6 '>
                     <h4 className='text-white'>
-                      “Awake’s expertise transformed my vision into success!”
+                      “Ronminco's expertise transformed my vision into success!”
                     </h4>
                     <div className='flex flex-col gap-1'>
-                      <p className='text-white font-medium'>Kabir Shah</p>
+                      <p className='text-white font-medium'>Phoebe Jiao</p>
                       <p className='text-white/60 text-sm font-medium'>
-                        Founder of Chipsland
+                        Founder of Propeak Finance
                       </p>
                     </div>
                   </div>
@@ -77,15 +77,15 @@ function CustomerStories() {
                       Customer stories
                     </span>
                     <h2 className='text-2xl lg:text-5xl'>
-                      “Awake Design Agency brought our ideas to life with
+                      “Ronminco brought our ideas to life with
                       exceptional creativity and precision, exceeding
                       expectations.”
                     </h2>
                   </div>
                   <div className='flex flex-col gap-1'>
-                    <p className='font-medium'>Kabir Shah</p>
+                    <p className='font-medium'>Phoebe Jiao</p>
                     <p className='text-dark_black/60 dark:text-white/60 text-sm font-medium'>
-                      Founder of Chipsland
+                      Founder of Propeak Finance
                     </p>
                   </div>
                 </div>
