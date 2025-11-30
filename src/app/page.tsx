@@ -49,7 +49,7 @@ export default function Home() {
       {/* ---------------------Customer Stories section Ends-----------------  */}
 
       {/* ---------------------Subscription section Starts-----------------  */}
-      <Subscription />
+      {/* <Subscription /> */}
       {/* ---------------------Subscription section Ends-----------------  */}
 
       {/* ---------------------Faq section Starts-----------------  */}
