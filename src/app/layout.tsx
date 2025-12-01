@@ -8,6 +8,10 @@ import { Providers } from './providers'
 export const metadata: Metadata = {
   title: 'Ronminco | Software Solutions by Robert & Michelle',
   description: 'A software studio founded by Robert and Michelle, crafting innovative solutions that transform businesses through cutting-edge technology.',
+  metadataBase: new URL('https://www.ronminco.com'),
+  alternates: {
+    canonical: 'https://www.ronminco.com',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
