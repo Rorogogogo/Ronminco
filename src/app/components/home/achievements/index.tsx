@@ -41,12 +41,12 @@ function Achievements() {
     )
 
     // 2. Stats Counters (Simulated)
-    const counters = containerRef.current.querySelectorAll('.stat-number')
-    counters.forEach(counter => {
+    const counters = containerRef.current.querySelectorAll<HTMLElement>('.stat-number')
+    counters.forEach((counter) => {
         const raw = counter.textContent?.replace(/\D/g, '') || '0'
         const target = parseInt(raw)
         
-        gsap.to(counter, {
+        tl.to(counter, {
             innerText: target,
             duration: 2,
             snap: { innerText: 1 },
